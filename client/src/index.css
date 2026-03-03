@@ -2,7 +2,7 @@
    SOLIDUS PRO - Design System
    Style: Warm industrial minimalism
    Colors: Clay orange + warm neutral + ivory
-   Fonts: Archivo (headings) + Public Sans (body)
+   Font: Sora
    ============================================================ */
 
 @import "tailwindcss";
@@ -11,6 +11,8 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --font-sans: "Sora", sans-serif;
+
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -101,13 +103,18 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: "Public Sans", sans-serif;
+    font-family: "Sora", sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: "Archivo", sans-serif;
+    font-family: "Sora", sans-serif;
     font-weight: 700;
     letter-spacing: -0.01em;
+  }
+
+  [class~="font-['Archivo']"],
+  [class~="font-['Public_Sans']"] {
+    font-family: "Sora", sans-serif !important;
   }
 
   button:not(:disabled),
@@ -155,7 +162,7 @@
   .btn-orange {
     background-color: #e77719;
     color: white;
-    font-family: "Archivo", sans-serif;
+    font-family: "Sora", sans-serif;
     font-weight: 700;
     font-size: 1rem;
     letter-spacing: 0.05em;
@@ -170,7 +177,7 @@
   }
 
   .section-label {
-    font-family: "Archivo", sans-serif;
+    font-family: "Sora", sans-serif;
     font-weight: 600;
     font-size: 0.75rem;
     letter-spacing: 0.15em;
